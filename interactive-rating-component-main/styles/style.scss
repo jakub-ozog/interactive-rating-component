@@ -26,3 +26,16 @@ $VeryDarkBlue: hsl(216, 12%, 8%);
 body  {
     background-color: $VeryDarkBlue;
 }
+
+.ratingComponent {
+    background-color: $DarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+}
