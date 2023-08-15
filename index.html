@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script defer src="app/script.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -22,37 +22,47 @@
   <body>
     <div class="container">
       <section class="rating">
-        <div class="rating__star">
-          <img src="images/icon-star.svg" alt="icon-star" />
+        <div class="rating__initScreen">
+          <div class="rating__star">
+            <img src="images/icon-star.svg" alt="icon-star" />
+          </div>
+
+          <div class="rating__title">
+            <h1>How did we do?</h1>
+          </div>
+          <div class="rating__desc">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </div>
+
+          <div class="rating__numbers">
+            <div class="rating__singleNum">
+              <p>1</p>
+            </div>
+            <div class="rating__singleNum">
+              <p>2</p>
+            </div>
+            <div class="rating__singleNum">
+              <p>3</p>
+            </div>
+            <div class="rating__singleNum">
+              <p>4</p>
+            </div>
+            <div class="rating__singleNum">
+              <p>5</p>
+            </div>
+          </div>
+
+          <button class="submitBtn" role="button" type="submit">Submit</button>
         </div>
 
-        <div class="rating__title">
-          <h1>How did we do?</h1>
-        </div>
-        <div class="rating__desc">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </div>
+        <div class="rating__tyScreen">
+          <img src="images/illustration-thank-you.svg" alt="thank-you" />
 
-        <div class="rating__numbers">
-          <div class="rating__singleNum">
-            <p>1</p>
-          </div>
-          <div class="rating__singleNum">
-            <p>2</p>
-          </div>
-          <div class="rating__singleNum">
-            <p>3</p>
-          </div>
-          <div class="rating__singleNum">
-            <p>4</p>
-          </div>
-          <div class="rating__singleNum">
-            <p>5</p>
+          <div class="rating__result">
+            <p>You selected 4 out 5</p>
           </div>
         </div>
-
-        <button class="submitBtn" role="button" type="submit">Submit</button>
       </section>
     </div>
   </body>

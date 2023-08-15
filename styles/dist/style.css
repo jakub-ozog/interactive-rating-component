@@ -22,6 +22,9 @@ body {
   border-radius: 15px;
   padding: 2.5rem 2.5rem;
 }
+.rating__initScreen {
+  display: none;
+}
 .rating__star img {
   width: 3.25rem;
   border-radius: 50%;
@@ -56,6 +59,27 @@ body {
   overflow: hidden;
   color: #7c8798;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.rating__singleNum:hover {
+  background: #fb7413;
+  color: white;
+  transition: all 0.2s;
+}
+.rating__result {
+  background-color: rgba(56, 64, 77, 0.439);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.rating__result p {
+  color: #fb7413;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
 }
 
 .submitBtn {

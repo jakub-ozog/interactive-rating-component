@@ -3,7 +3,7 @@
  $White: hsl(0, 0%, 100%);
  $Orange: hsl(25, 97%, 53%);
  $LightGrey: hsl(217, 12%, 63%);
- $MediumGrey: hsl(216, 12%, 54%);
+ $MediumGrey: #7c8798;
  $DarkBlue: hsl(213, 19%, 18%);
  $DarkBlue2: hsla(217, 16%, 26%, 0.439);
  $VeryDarkBlue:hsl(216, 12%, 8%);
@@ -32,6 +32,10 @@
      min-height: 27rem;
      border-radius: 15px;
      padding: 2.5rem 2.5rem;
+
+     &__initScreen {
+         display: none;
+     }
 
      &__star {
 
@@ -77,8 +81,40 @@
          overflow: hidden;
          color: $MediumGrey;
          cursor: pointer;
+         transition: all .2s;
+
+         &:hover {
+             background: $Orange;
+             color: $White;
+             transition: all .2s;
+         }
+     }
+
+
+     &__tyScreen {
+
+     }
+
+     &__result {
+         background-color: $DarkBlue2;
+         border-radius: 15px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 1.5rem;
+
+         p {
+             color: $Orange;
+             font-weight: 700;
+             font-size: 1rem;
+             padding: .75rem 1rem;
+             margin: 0;
+
+         }
      }
  }
+
+
 
  .submitBtn {
      background-color: $Orange;
