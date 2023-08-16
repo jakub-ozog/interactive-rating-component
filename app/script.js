@@ -18,9 +18,22 @@ numArr.forEach((item) => {
 });
 
 
-const submit = document.querySelector('.submitBtn');
 
-submit.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('test');
-})
+const submit = document.querySelector(".submitBtn");
+const initScreen = document.querySelector(".rating__initScreen");
+const tyScreen = document.querySelector(".rating__tyScreen");
+let result = document.querySelector(".rating__result");
+
+submit.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  initScreen.classList.toggle("dNone");
+  tyScreen.classList.toggle("dBlock");
+  
+  
+
+
+  console.log("test");
+});
