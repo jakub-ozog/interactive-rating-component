@@ -1,6 +1,7 @@
  ///Variables
 
  $White: hsl(0, 0%, 100%);
+ $DarkOrange: hsla(25, 97%, 53%, 0.631);
  $Orange: hsl(25, 97%, 53%);
  $LightGrey: hsl(217, 12%, 63%);
  $MediumGrey: #7c8798;
@@ -15,6 +16,10 @@
      overflow-y: hidden;
  }
 
+ p {
+     font-size: 15px;
+ }
+
  body {
      background: $VeryDarkBlue;
  }
@@ -26,6 +31,9 @@
  }
 
  .rating {
+     display: flex;
+     justify-content: center;
+     text-align: center;
      max-width: 27rem;
      background-color: $DarkBlue;
      color: $White;
@@ -34,10 +42,12 @@
      padding: 2.5rem 2.5rem;
 
      &__initScreen {
-         display: none;
+        //  display: none;
      }
 
+     
      &__star {
+         text-align: left;
 
          img {
              width: 3.25rem;
@@ -92,25 +102,37 @@
 
 
      &__tyScreen {
-
+         display: none;
      }
 
      &__result {
          background-color: $DarkBlue2;
          border-radius: 15px;
-         display: flex;
-         justify-content: center;
          align-items: center;
          margin-top: 1.5rem;
 
          p {
-             color: $Orange;
-             font-weight: 700;
+             color: $DarkOrange;
+             font-weight: 400;
              font-size: 1rem;
              padding: .75rem 1rem;
              margin: 0;
 
          }
+     }
+
+     &__tyTitle {
+         color: $White;
+         font-weight: 400;
+         font-size: 2rem;
+         margin-top: 2rem;
+
+     }
+
+     &__tyDesc {
+         color: $MediumGrey;
+         margin-top: 1.5rem;
+         font-size: 1em;
      }
  }
 
@@ -138,4 +160,12 @@
          transition: all .2s;
          color: $Orange;
      }
+ }
+
+ .dNone {
+    display: none;
+ }
+
+ .dBlock {
+    display: block;
  }

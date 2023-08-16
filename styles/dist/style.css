@@ -4,6 +4,10 @@
   overflow-y: hidden;
 }
 
+p {
+  font-size: 15px;
+}
+
 body {
   background: #121417;
 }
@@ -15,6 +19,9 @@ body {
 }
 
 .rating {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   max-width: 27rem;
   background-color: #252d37;
   color: white;
@@ -22,8 +29,8 @@ body {
   border-radius: 15px;
   padding: 2.5rem 2.5rem;
 }
-.rating__initScreen {
-  display: none;
+.rating__star {
+  text-align: left;
 }
 .rating__star img {
   width: 3.25rem;
@@ -66,20 +73,32 @@ body {
   color: white;
   transition: all 0.2s;
 }
+.rating__tyScreen {
+  display: none;
+}
 .rating__result {
   background-color: rgba(56, 64, 77, 0.439);
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
 }
 .rating__result p {
-  color: #fb7413;
-  font-weight: 700;
+  color: rgba(251, 116, 19, 0.631);
+  font-weight: 400;
   font-size: 1rem;
   padding: 0.75rem 1rem;
   margin: 0;
+}
+.rating__tyTitle {
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.rating__tyDesc {
+  color: #7c8798;
+  margin-top: 1.5rem;
+  font-size: 1em;
 }
 
 .submitBtn {
@@ -102,4 +121,12 @@ body {
   background-color: white;
   transition: all 0.2s;
   color: #fb7413;
+}
+
+.dNone {
+  display: none;
+}
+
+.dBlock {
+  display: block;
 }

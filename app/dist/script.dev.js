@@ -16,8 +16,30 @@ numArr.forEach(function (item) {
     currentNum = item;
   });
 });
-var submit = document.querySelector('.submitBtn');
-submit.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log('test');
+var submit = document.querySelector(".submitBtn");
+var initScreen = document.querySelector(".rating__initScreen");
+var tyScreen = document.querySelector(".rating__tyScreen");
+var result = document.querySelector(".rating__result");
+submit.addEventListener("click", function _callee(e) {
+  return regeneratorRuntime.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          e.preventDefault();
+          _context.next = 3;
+          return regeneratorRuntime.awrap(new Promise(function (resolve) {
+            return setTimeout(resolve, 1000);
+          }));
+
+        case 3:
+          initScreen.classList.toggle("dNone");
+          tyScreen.classList.toggle("dBlock");
+          console.log("test");
+
+        case 6:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
 });
