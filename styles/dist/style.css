@@ -25,11 +25,12 @@ body {
   max-width: 27rem;
   background-color: #252d37;
   color: white;
-  min-height: 27rem;
   border-radius: 15px;
   padding: 2.5rem 2.5rem;
 }
-.rating__star {
+.rating .rating__star,
+.rating .rating__title,
+.rating .rating__desc {
   text-align: left;
 }
 .rating__star img {
@@ -55,6 +56,11 @@ body {
   gap: 1rem;
   margin-top: 2rem;
 }
+@media screen and (max-width: 400px) {
+  .rating__numbers {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}
 .rating__singleNum {
   background: rgba(56, 64, 77, 0.439);
   width: 3rem;
@@ -71,7 +77,6 @@ body {
 .rating__singleNum:hover {
   background: #fb7413;
   color: white;
-  transition: all 0.2s;
 }
 .rating__tyScreen {
   display: none;
@@ -80,7 +85,9 @@ body {
   background-color: rgba(56, 64, 77, 0.439);
   border-radius: 15px;
   align-items: center;
-  margin-top: 1.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: fit-content;
 }
 .rating__result p {
   color: rgba(251, 116, 19, 0.631);
@@ -97,8 +104,9 @@ body {
 }
 .rating__tyDesc {
   color: #7c8798;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-size: 1em;
+  line-height: 25px;
 }
 
 .submitBtn {

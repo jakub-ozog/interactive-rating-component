@@ -1,39 +1,36 @@
-const singleNum = document.querySelectorAll(".rating__singleNum");
-const numArr = Array.from(singleNum);
+const options = document.querySelectorAll(".rating__singleNum");
+const submitButton = document.querySelector(".submitBtn");
+const initScreen = document.querySelector(".rating__initScreen");
+const tyScreen = document.querySelector(".rating__tyScreen");
+const userRate = document.querySelector(".rating__userRate");
 
-let currentNum = null;
-let previousNum = null;
+let selectedOption = null;
+let previousOption = null;
+let currentOption = null;
 
-numArr.forEach((item) => {
-  item.addEventListener("click", () => {
-    if (currentNum !== null) {
-      currentNum.style.backgroundColor = previousNum;
+options.forEach((option) => {
+  option.addEventListener("click", () => {
+    selectedOption = option.textContent;
+
+    if (currentOption) {
+      currentOption.style.background = previousOption;
     }
 
-    previousNum = item.style.backgroundColor;
-    item.style.backgroundColor = "#7c8798";
-    item.style.color = "#fff";
-    currentNum = item;
+    previousOption = option.style.backgroundColor;
+    option.style.backgroundColor = "#7c8798";
+    option.style.color = "#fff";
+    currentOption = option;
   });
 });
 
-
-
-const submit = document.querySelector(".submitBtn");
-const initScreen = document.querySelector(".rating__initScreen");
-const tyScreen = document.querySelector(".rating__tyScreen");
-let result = document.querySelector(".rating__result");
-
-submit.addEventListener("click", async (e) => {
-  e.preventDefault();
-
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
-  initScreen.classList.toggle("dNone");
-  tyScreen.classList.toggle("dBlock");
-  
-  
-
-
-  console.log("test");
+submitButton.addEventListener("click", async (e) => {
+  if (selectedOption) {
+    setTimeout(() => {
+      initScreen.classList.toggle("dNone");
+      tyScreen.classList.toggle("dBlock");
+      userRate.textContent = selectedOption;
+    }, 700);
+  } else {
+    alert("You must choose any rate before submit");
+  }
 });

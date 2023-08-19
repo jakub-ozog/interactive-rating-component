@@ -1,42 +1,43 @@
 "use strict";
 
-var singleNum = document.querySelectorAll(".rating__singleNum");
-var numArr = Array.from(singleNum);
-var currentNum = null;
-var previousNum = null;
-numArr.forEach(function (item) {
-  item.addEventListener("click", function () {
-    if (currentNum !== null) {
-      currentNum.style.backgroundColor = previousNum;
-    }
-
-    previousNum = item.style.backgroundColor;
-    item.style.backgroundColor = "#7c8798";
-    item.style.color = "#fff";
-    currentNum = item;
-  });
-});
-var submit = document.querySelector(".submitBtn");
+var options = document.querySelectorAll(".rating__singleNum");
+var submitButton = document.querySelector(".submitBtn");
 var initScreen = document.querySelector(".rating__initScreen");
 var tyScreen = document.querySelector(".rating__tyScreen");
-var result = document.querySelector(".rating__result");
-submit.addEventListener("click", function _callee(e) {
+var userRate = document.querySelector(".rating__userRate");
+var selectedOption = null;
+var previousOption = null;
+var currentOption = null;
+options.forEach(function (option) {
+  option.addEventListener("click", function () {
+    selectedOption = option.textContent;
+
+    if (currentOption) {
+      currentOption.style.background = previousOption;
+    }
+
+    previousOption = option.style.backgroundColor;
+    option.style.backgroundColor = "#7c8798";
+    option.style.color = "#fff";
+    currentOption = option;
+  });
+});
+submitButton.addEventListener("click", function _callee(e) {
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          e.preventDefault();
-          _context.next = 3;
-          return regeneratorRuntime.awrap(new Promise(function (resolve) {
-            return setTimeout(resolve, 1000);
-          }));
+          if (selectedOption) {
+            setTimeout(function () {
+              initScreen.classList.toggle("dNone");
+              tyScreen.classList.toggle("dBlock");
+              userRate.textContent = selectedOption;
+            }, 700);
+          } else {
+            alert("You must choose any rate before submit");
+          }
 
-        case 3:
-          initScreen.classList.toggle("dNone");
-          tyScreen.classList.toggle("dBlock");
-          console.log("test");
-
-        case 6:
+        case 1:
         case "end":
           return _context.stop();
       }

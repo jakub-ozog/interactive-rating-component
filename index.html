@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive rating component for test purposes - Frontend Mentor"
+    />
     <script defer src="app/script.js"></script>
     <link
       rel="icon"
@@ -31,8 +35,10 @@
             <h1>How did we do?</h1>
           </div>
           <div class="rating__desc">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
           </div>
 
           <div class="rating__numbers">
@@ -52,20 +58,25 @@
               <p>5</p>
             </div>
           </div>
-
           <button class="submitBtn" role="button" type="submit">Submit</button>
         </div>
 
         <div class="rating__tyScreen">
-          <img src="images/illustration-thank-you.svg" alt="thank-you" />
+          <img
+            src="images/illustration-thank-you.svg"
+            alt="thank you image"
+            title="thank you image"
+          />
 
           <div class="rating__result">
-            <p>You selected  out 5</p>
+            <p>You selected <span class="rating__userRate"></span>out of 5</p>
           </div>
           <div class="rating__tyTitle">Thank you!</div>
           <div class="rating__tyDesc">
-            We appreciate you taking time to give a rating. <br />
-            If you ever need more support,don't hesitate to get in touch!
+            <p>
+              We appreciate you taking time to give a rating. <br />
+              If you ever need more support,don't hesitate to get in touch!
+            </p>
           </div>
         </div>
       </section>
